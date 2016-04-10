@@ -13,6 +13,9 @@ public class Tower : MonoBehaviour
 
     void OnTriggerEnter(Collider co)
     {
+
+        
+
         if (co.GetComponent<Monster>())
         {
             GameObject g = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
