@@ -5,6 +5,7 @@ public class Tower : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public float rotationSpeed = 35;
+    public int cost = 5;
 
     void Update()
     {

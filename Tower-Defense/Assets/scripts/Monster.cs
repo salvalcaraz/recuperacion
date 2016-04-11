@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Monster : MonoBehaviour
 {
+    public int moneyValue = 2;
+
 
     void Start()
     {
@@ -17,6 +19,7 @@ public class Monster : MonoBehaviour
         if (co.name == "Castle")
         {
             co.GetComponentInChildren<Health>().decrease();
+            GameObject.FindObjectOfType<ScoreManager>().money += moneyValue;
             Destroy(gameObject);
         }
 
