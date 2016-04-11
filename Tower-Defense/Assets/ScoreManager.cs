@@ -9,11 +9,11 @@ public class ScoreManager : MonoBehaviour {
     public int costeTorreta = 5;
 
 	void Start () {
-	
-	}
+      
+    }
 	
 	void Update () {
         moneyText.text = money.ToString();
-
+      
 	}
 }

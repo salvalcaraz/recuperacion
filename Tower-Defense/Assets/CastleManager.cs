@@ -3,12 +3,13 @@ using System.Collections;
 
 public class CastleManager : MonoBehaviour {
     public GameObject castle;
-
+    public GameObject gameover;
     void Update() {
 
         if (castle == null)
         {
-            Application.LoadLevel(02);
+            Time.timeScale = 0;
+            gameover.SetActive(true);
         }
                 }
 }
