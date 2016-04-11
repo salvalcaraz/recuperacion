@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 10;
 
+    public float speed = 10;
+    public int moneyValue = 2;
     public Transform target;
 
     void FixedUpdate()
@@ -25,6 +26,7 @@ public class Bullet : MonoBehaviour
         if (health)
         {
             health.decrease();
+            GameObject.FindObjectOfType<ScoreManager>().money += moneyValue;
             Destroy(gameObject);
         }
     }

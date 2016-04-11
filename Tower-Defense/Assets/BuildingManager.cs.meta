@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: 45f474af81f50b1439a4d3670b1a6af4
-timeCreated: 1460396823
+timeCreated: 1460399672
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - selectedTower: {fileID: 175410, guid: c4af14a44c0ca1d4780667eaabc9e03e, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
