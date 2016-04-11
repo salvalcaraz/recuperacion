@@ -5,18 +5,36 @@ public class Buildplace : MonoBehaviour
 {
     public BuildingManager bm;
     public GameObject towerPrefab;
+    bool invocar = true;
+    ScoreManager sm;
+
+    void Start()
+    {
+        sm = GameObject.FindObjectOfType<ScoreManager>();
+    }
+    void Update()
+    {
+        if (sm.money < 5) { invocar = false; }
+    }
 
     void OnMouseUpAsButton()
     {
-        GameObject g = (GameObject)Instantiate(towerPrefab);
-        g.transform.position = transform.position + Vector3.up;
+        bool gastar = true;
 
-        ScoreManager sm = GameObject.FindObjectOfType<ScoreManager>();
-            if (sm.money < bm.selectedTower.GetComponent<Tower>().cost) {
-            Debug.Log("not enough money");  
-            return;
+
+        if (invocar)
+        {
+            GameObject g = (GameObject)Instantiate(towerPrefab);
+            g.transform.position = transform.position + Vector3.up;
+            sm.money = sm.money - sm.costeTorreta;
         }
-        sm.money -= bm.selectedTower.GetComponent<Tower>().cost;
+
+
+        if (gastar)
+        {
+            
+            gastar = false;
+        }
 
     }
- }
+}
